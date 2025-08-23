@@ -1,34 +1,44 @@
+import React from 'react';
+
 export default function Navbar() {
   return (
-    <nav className="border-b border-gray-300 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+    <nav className="bg-background">
       <div className="container mx-auto">
-        <div className="flex h-60 items-start justify-between py-5">
+        <div className="flex min-h-32 items-start justify-between px-6 py-4">
           {/* Logo/Brand */}
-          <div className="border border-border flex items-center font-bold text-xl">
-              <a href="#home" className="text-foreground hover:text-primary transition-colors">Shubh Khatri</a>
+          <div>
+            <a href="#" className="hover:text-primary transition-colors">
+              <div className="font-bold text-2xl">Shubh Khatri</div>
+              <div className="text-gray-500 font-medium text-lg md:text-lg">
+                Full Stack & AI Automation Professional
+              </div>
+            </a>
           </div>
-
-          {/* Desktop Navigation */}
+ 
+          {/* Navigation Links - Will be added later */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#resume" className="text-foreground hover:text-primary transition-colors">
+            {/* Navigation items will go here */}
+            <a href="#" className="font-bold text-xl hover:text-primary transition-colors">
               Resume
             </a>
-            <a href="#services" className="text-foreground hover:text-primary transition-colors">
-              Services
+            <a href="#" className="font-bold text-xl hover:text-primary transition-colors">
+              Portfolio
             </a>
-            <a href="#cta" className="text-foreground hover:text-primary transition-colors">
+            <button className="font-bold text-xl bg-white text-black transition-colors hover:bg-gray-400 hover:text-black px-4 py-2 rounded-xl whitespace-nowrap">
               Hire Me
-            </a>
+            </button>
+            
+
           </div>
 
-          {/* Mobile Menu Button */}
-          <button className="md:hidden p-2 rounded-md hover:bg-secondary transition-colors">
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          {/* Mobile Menu Button - Will be implemented later */}
+          <button className="md:hidden p-2">
+            <div className="h-0.5 w-6 bg-foreground mb-1.5"></div>
+            <div className="h-0.5 w-6 bg-foreground mb-1.5"></div>
+            <div className="h-0.5 w-6 bg-foreground"></div>
           </button>
         </div>
       </div>
     </nav>
   );
-} 
+}
