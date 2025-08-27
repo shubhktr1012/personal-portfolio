@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
-        <div className="px-2 min-h-screen bg-background text-foreground">
+        <div className="min-h-screen px-2 md:px-4">
           <Navbar />
-          <main>
+          <main className="container mx-auto w-full">
             <div className="flex items-start max-w-full">
               <StickySection />
               {children}
