@@ -5,12 +5,12 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
@@ -20,14 +20,14 @@ body {
 /* Custom Typography Classes */
 @layer utilities {
   .heading {
-    @apply text-2xl lg:text-3xl 2xl:text-5xl;
+    @apply text-2xl lg:text-3xl;
   }
   
   .sub-heading {
-    @apply text-xl lg:text-2xl 2xl:text-4xl;
+    @apply text-xl lg:text-2xl;
   }
   
   .body-text {
-    @apply text-base lg:text-lg 2xl:text-2xl;
+    @apply text-base lg:text-lg;
   }
 }

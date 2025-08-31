@@ -1,6 +1,6 @@
 # Project: [Personal Portfolio]
 
-## Core Aim: As a Full-Stack Developer, I want to be able to showcase my resume, my work, and the ways someone can contact me,  by building a simple yet engaging and refined portfolio that justifies my skills and gives the client a reference point before even clicking to see my work.
+## Core Aim: As a Full-Stack Developer, I want to be able to showcase my resume, my work, and the ways someone can contact me, by building a simple yet engaging and refined portfolio that justifies my skills and gives the client a reference point before even clicking to see my work.
 
 ---
 

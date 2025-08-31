@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
+import { FaGithub } from "react-icons/fa";
 
 export default function Resume() {
 
@@ -10,15 +11,19 @@ export default function Resume() {
                 Experience
             </div>
             <div className="flex items-start justify-between">
-
                 <div className="py-4">
-                    <AiOutlineArrowRight size={24} color="gray" />
-                    <h1 className="font-bold body-text py-1">Freelance Full Stack Developer & Product Builder</h1>
-                    <h2 className="font-medium italic body-text py-1">Self-Employed</h2>
+                    <div className="flex items-center">
+                        <AiOutlineArrowRight size={18} color="gray" className="mr-2" />
+                        <h1 className="font-bold body-text">Freelance Full Stack Developer & Product Builder</h1>
+                    </div>
+                    <h2 className="font-medium italic body-text pl-6">Self-Employed</h2>
                 </div>
                 <div className="py-4 font-medium italic body-text">
-                    <h2 className="font-medium italic body-text py-1">Jan'24 - Present</h2>
+                    <h2 className="font-medium italic body-text">Jan'24 - Present</h2>
                 </div>
+            </div>
+            <div className="pl-6 body-text">
+                
             </div>
             
 
