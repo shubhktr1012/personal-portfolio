@@ -96,4 +96,8 @@ Project Link: [https://github.com/shubhktr1012/personal-portfolio](https://githu
 
 ## 📄 License
 
+<<<<<<< HEAD
 Distributed under the MIT License. See `LICENSE` for more information. (You might need to create a `LICENSE` file if you don't have one).
+=======
+Distributed under the MIT License. See `LICENSE` for more information. (You might need to create a `LICENSE` file if you don't have one).
+>>>>>>> b47eda2 (NavBar Complete Update, now onto Hero Section (Mobile-First))
