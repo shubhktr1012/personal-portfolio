@@ -1,12 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
-import StickySection from '../components/StickySection';
-import { Montserrat } from 'next/font/google';
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-});
+import CustomCursor from '@/components/CustomCursor';
 
 export const metadata: Metadata = {
   title: 'Shubh Khatri - Portfolio',
@@ -20,15 +15,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body>
+        <CustomCursor />
         <div className="min-h-screen">
           <Navbar />
-          {/* <main className="container mx-auto w-full">
-            <div className="flex items-start max-w-full">
-              <StickySection />
+          <main className="w-full md:container md:mx-auto">
+            <div className="flex items-start w-full">
               {children}
             </div>
-          </main> */}
+          </main>
         </div>
       </body>
     </html>

@@ -25,8 +25,6 @@ export default function Resume() {
             <div className="pl-6 body-text">
                 
             </div>
-            
-
         </div>
         
     )

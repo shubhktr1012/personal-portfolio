@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { karla } from '../lib/fonts';
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { HiX } from "react-icons/hi";
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 
 export default function Navbar() {
 
@@ -19,7 +19,7 @@ export default function Navbar() {
       height: '100vh', //Full viewport height
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.25,
+        staggerChildren: 0.2,
       },
     },
     closed: {
@@ -38,7 +38,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={`w-full px-6 ${isOpen ? 'md:border-b border-b-0' : 'border-b'} border-gray-400/15 ${karla.className}`}>
+    <nav className={`w-full px-6 ${karla.className}`}>
         <div className="flex items-center justify-between min-w-full py-8">
           {/* Logo/Brand */}
           <div>
@@ -100,7 +100,7 @@ export default function Navbar() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="md:hidden absolute top-0 left-0 w-full text-5xl flex flex-col items-center justify-center space-y-8 z-10"
+              className="md:hidden absolute top-0 left-0 w-full h-[calc(100vh-4rem)] text-5xl flex flex-col items-center justify-center space-y-8 z-20 bg-background"
               initial="closed"
               animate="open"
               exit="closed"

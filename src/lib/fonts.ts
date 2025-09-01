@@ -13,7 +13,7 @@ export const karla = Karla({
 
 export const ibm = IBM_Plex_Mono({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700"], // 400: Regular, 500: Medium, 600: SemiBold, 700: Bold
 })
 
 export const oswald = Oswald({

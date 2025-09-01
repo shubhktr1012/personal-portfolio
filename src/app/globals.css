@@ -15,6 +15,11 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  cursor: none;
+}
+
+a, button, input {
+  cursor: none;
 }
 
 /* Custom Typography Classes */
@@ -30,4 +35,37 @@ body {
   .body-text {
     @apply text-base lg:text-lg;
   }
+}
+
+.cursor {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  z-index: 9999;
+
+  mix-blend-mode: difference;
+}
+
+.cursor.clicked {
+  width: 15px;
+  height: 15px;
+}
+
+.cursor.hovering {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+}
+
+.profile-picture {
+  width: 100px;       /* Set a fixed width */
+  height: 100px;      /* Set an equal height to make it a square */
+  border-radius: 50%; /* This is the magic line that makes it a circle */
+  object-fit: cover;  /* Prevents the image from being stretched or squished */
+  background-color: lightgrey; /* Light gray fill */
 }
