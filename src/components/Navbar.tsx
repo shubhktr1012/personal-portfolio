@@ -39,12 +39,12 @@ export default function Navbar() {
 
   return (
     <nav className={`w-full px-6 ${karla.className}`}>
-        <div className="flex items-center justify-between min-w-full py-8">
+        <div className="flex items-center justify-between min-w-full py-6">
           {/* Logo/Brand */}
           <div>
             <a href="#" className="hover:text-primary transition-colors">
-              <div className="font-semibold heading hidden md:block">SHUBH KHATRI</div>
-              <div className="font-semibold heading md:hidden">SHUBH K.</div>
+              <div className="font-semibold text-black heading hidden md:block">SHUBH KHATRI</div>
+              <div className="font-semibold text-black heading md:hidden">SHUBH K.</div>
               {/* <div className="text-gray-500 font-bold sub-heading">
                 Full Stack & AI Automation Professional
               </div> */}
