@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import CustomCursor from '@/components/CustomCursor';
+import Footer from '@/components/Footer'; // <-- Import your Footer component here
 
 export const metadata: Metadata = {
   title: 'Shubh Khatri - Portfolio',
@@ -24,6 +25,7 @@ export default function RootLayout({
               {children}
             </div>
           </main>
+          <Footer />
         </div>
       </body>
     </html>

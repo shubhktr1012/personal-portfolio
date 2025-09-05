@@ -7,9 +7,10 @@ import { RiFileCopyLine } from "react-icons/ri";
 
 
 export default function HeroSection() {
+
+    const [copied, setCopied] = useState(false);
+
     return (
-
-
         // Mobile Hero Section
         <div className='py-12 px-4 gap-y-10 max-w-full md:hidden flex flex-col items-start justify-center border-b border-t border-gray-400/20'>
             <div className='gap-y-8 flex flex-col items-start'>
@@ -34,6 +35,8 @@ export default function HeroSection() {
                 className={`${ibm.className} font-medium sub-heading flex items-center gap-x-2 cursor-pointer`}
                 onClick={() => {
                     navigator.clipboard.writeText('shubh12khatri@gmail.com');
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 1500);
                 }}
                 >
                     shubh12khatri@gmail.com <RiFileCopyLine size={28} />
@@ -51,7 +54,16 @@ export default function HeroSection() {
                     See My AI Projects
                 </button>
             </div>
-            
+            <div
+                className={`
+                    fixed bottom-4 left-1/2 -translate-x-1/2 z-[9998] px-4 py-2 bg-gray-300 ${ibm.className} text-black text-sm shadow-lg
+                    transition-all duration-500 ease-in-out
+                    ${copied ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none translate-y-4'}
+                `}
+                style={{ minWidth: 90, textAlign: 'center' }}
+            >
+                Copied!
+            </div>
         </div>
         
     );
