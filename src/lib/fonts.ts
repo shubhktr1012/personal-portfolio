@@ -1,8 +1,4 @@
-import { Inter } from "next/font/google";
-import { Karla } from "next/font/google";
-import { IBM_Plex_Mono } from "next/font/google";
-import { Oswald } from "next/font/google";
-import { Montserrat } from "next/font/google";
+import { Inter, Karla, IBM_Plex_Mono, Oswald, Montserrat } from "next/font/google";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -23,4 +19,10 @@ export const oswald = Oswald({
 
 export const mont = Montserrat({
   subsets: ["latin"],
+})
+
+export const sfMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sf-mono",
 })

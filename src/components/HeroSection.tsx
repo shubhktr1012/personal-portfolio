@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { karla } from '../lib/fonts';
+import { karla, oswald } from '../lib/fonts';
 import { ibm } from '../lib/fonts';
 import { RiFileCopyLine } from "react-icons/ri";
 
@@ -9,6 +9,7 @@ import { RiFileCopyLine } from "react-icons/ri";
 export default function HeroSection() {
 
     const [copied, setCopied] = useState(false);
+    const email = "shubh12khatri@gmail.com";
 
     return (
         // Mobile Hero Section
@@ -25,7 +26,7 @@ export default function HeroSection() {
                     />
                 </div>
                 {/* Name heading */}
-                <div className={`${karla.className} font-bold text-7xl text-black`}>
+                <div className={`${karla.className} font-bold text-7xl text-black tracking-tighter`}>
                     SHUBH
                     <br />
                     KHATRI
@@ -34,12 +35,12 @@ export default function HeroSection() {
                 <button
                 className={`${ibm.className} font-medium sub-heading flex items-center gap-x-2 cursor-pointer`}
                 onClick={() => {
-                    navigator.clipboard.writeText('shubh12khatri@gmail.com');
+                    navigator.clipboard.writeText(email);
                     setCopied(true);
                     setTimeout(() => setCopied(false), 1500);
                 }}
                 >
-                    shubh12khatri@gmail.com <RiFileCopyLine size={28} />
+                    {email} <RiFileCopyLine size={28} />
                 </button>
                 {/* Short bio/description */}
                 <div className={`${ibm.className} text-justify font-medium sub-heading`}>
@@ -56,7 +57,7 @@ export default function HeroSection() {
             </div>
             <div
                 className={`
-                    fixed bottom-4 left-1/2 -translate-x-1/2 z-[9998] px-4 py-2 bg-gray-300 ${ibm.className} text-black text-sm shadow-lg
+                    fixed bottom-4 left-1/2 -translate-x-1/2 z-[9998] px-4 py-2 bg-gray-200 ${ibm.className} text-black text-sm shadow-lg
                     transition-all duration-500 ease-in-out
                     ${copied ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none translate-y-4'}
                 `}

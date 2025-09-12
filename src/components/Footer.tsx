@@ -1,9 +1,7 @@
 'use client'
 import { ibm, karla, mont } from "@/lib/fonts";
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import { usePathname } from "next/navigation";
 
 
 export default function Footer() {

@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { ibm } from "../lib/fonts";
+import { ibm, karla } from "../lib/fonts";
 import ServiceCard from "./ServicesCard"; // The filename is ServicesCard.tsx
 
 
@@ -36,10 +36,10 @@ const services = [
 
 export default function ServicesSection() {
     return (
-        <div className="pt-8 pb-10 px-4 max-w-full md:hidden flex flex-col items-start">
+        <div className="pt-8 pb-10 px-4 max-w-full md:hidden flex flex-col items-start border-b border-gray-400/20">
             <div className="flex items-center justify-between w-full mb-8">
-                <div className="font-medium sub-heading ">services.</div>
-                <button className={`bg-gray-300 w-25 h-12 font-regular flex items-center justify-center ${ibm.className}`}>Explore</button>
+                <div className={`font-medium sub-heading ${karla.className}`}>services.</div>
+                <button className={`bg-gray-200 w-25 h-12 font-regular flex items-center justify-center ${ibm.className}`}>Explore</button>
             </div>
 
             {/* A simple container for our static cards */}

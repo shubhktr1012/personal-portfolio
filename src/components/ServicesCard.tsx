@@ -57,7 +57,8 @@ export default function ServiceCard({ service }: ServiceCardProps) {
 
     }, [service.title]);
     return (
-        <div className='relative w-full h-[500px] bg-black text-white shadow-xl flex flex-col justify-between overflow-hidden'
+        <div
+            className="relative w-full aspect-square bg-black text-white shadow-xl flex flex-col justify-between overflow-hidden"
         >
             <video 
                 ref={videoRef}
@@ -84,8 +85,8 @@ export default function ServiceCard({ service }: ServiceCardProps) {
                     })()}
                 </p>
             </div>
-            <div className="py-10 px-8">
-                <div className="max-w-full flex items-start justify-end">
+            <div className="absolute bottom-0 right-0 py-8 px-8">
+                <div className="max-w- flex items-start justify-end">
                     {service.logos.map((logoItem, index) => (
                         <div
                             key={index}
@@ -107,6 +108,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
                                 style={{ willChange: 'transform' }}
                             >
                                 <Image src={logoItem.src} alt={`${logoItem.name}`} width={40} height={40} />
+                        
                             </div>
                             <span
                                 className={`
