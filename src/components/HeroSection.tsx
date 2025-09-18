@@ -1,8 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { karla, oswald } from '../lib/fonts';
-import { ibm } from '../lib/fonts';
+import { karla, ibm, formaDjr } from '../lib/fonts';
 import { RiFileCopyLine } from "react-icons/ri";
 
 
@@ -14,11 +13,12 @@ export default function HeroSection() {
     return (
         // Mobile Hero Section
         <div className='py-12 px-4 gap-y-10 max-w-full md:hidden flex flex-col items-start justify-center border-b border-t border-gray-400/20'>
+            {/* Hero Section */}
             <div className='gap-y-8 flex flex-col items-start'>
                 {/* Profile picture container */}
                 <div className='profile-picture'>
                 <Image
-                    src="/michael.png"
+                    src="/shubh.jpg"
                     alt="Your Name"
                     width={150}
                     height={150}
@@ -33,7 +33,7 @@ export default function HeroSection() {
                 </div>
                 {/* Email copy button */}
                 <button
-                className={`${ibm.className} font-medium sub-heading flex items-center gap-x-2 cursor-pointer`}
+                className={`${karla.className} font-medium sub-heading flex items-center gap-x-2 cursor-pointer`}
                 onClick={() => {
                     navigator.clipboard.writeText(email);
                     setCopied(true);

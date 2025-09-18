@@ -54,13 +54,13 @@ export default function Navbar() {
         {/* Navigation Links - Will be added later */}
         <div className={`hidden md:flex items-center space-x-8`}>
           {/* Navigation items will go here */}
-          <a href="#" className="body-text font-light-300 hover:text-primary transition-colors">
-            Work
+          <a href="/" className="body-text hover:text-primary transition-colors">
+            Home
           </a>
-          <a href="#" className="body-text hover:text-primary transition-colors">
-            Services
+          <a href="/services" className="body-text hover:text-primary transition-colors">
+            Work & Services
           </a>
-          <a href="#" className="body-text transition-colors">
+          <a href="/contact" className="body-text hover:text-primary transition-colors">
             Contact Me
           </a>
           {/* Minimal custom button will be added here later */}
@@ -107,8 +107,8 @@ export default function Navbar() {
             variants={menuVariants}
             style={{ pointerEvents: 'auto' }}
           >
-            <motion.a href="/work" variants={linkVariants}>Work</motion.a>
-            <motion.a href="/services" variants={linkVariants}>Services</motion.a>
+            <motion.a href="/" variants={linkVariants}>Home</motion.a>
+            <motion.a href="/services" variants={linkVariants}>Work & Services</motion.a>
             <motion.a href="/contact" variants={linkVariants}>Contact Me</motion.a>
           </motion.div>
         )}

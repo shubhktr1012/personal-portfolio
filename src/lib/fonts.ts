@@ -1,4 +1,5 @@
 import { Inter, Karla, IBM_Plex_Mono, Oswald, Montserrat } from "next/font/google";
+import localFont from 'next/font/local'
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -26,3 +27,9 @@ export const sfMono = IBM_Plex_Mono({
   weight: ["400", "500", "600", "700"],
   variable: "--font-sf-mono",
 })
+
+export const formaDjr = localFont({
+  src: "../../public/FormaDJRDeck-Bold-Testing.otf",
+  display: "swap",
+  variable: "--font-forma-djr",
+});

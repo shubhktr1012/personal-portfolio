@@ -1,7 +1,8 @@
 'use client'
 import React from "react";
 import { ibm, karla } from "../lib/fonts";
-import ServiceCard from "./ServicesCard"; // The filename is ServicesCard.tsx
+import ServicesCard from "./ServicesCard"; // The filename is ServicesCard.tsx
+import { useRouter } from "next/navigation"; // Import useRouter
 
 
 const services = [
@@ -35,17 +36,24 @@ const services = [
 ];
 
 export default function ServicesSection() {
+    const router = useRouter(); // Initialize useRouter
+    
     return (
         <div className="pt-8 pb-10 px-4 max-w-full md:hidden flex flex-col items-start border-b border-gray-400/20">
             <div className="flex items-center justify-between w-full mb-8">
                 <div className={`font-medium sub-heading ${karla.className}`}>services.</div>
-                <button className={`bg-gray-200 w-25 h-12 font-regular flex items-center justify-center ${ibm.className}`}>Explore</button>
+                <button
+                    className={`bg-gray-200 w-25 h-12 font-regular flex items-center justify-center ${ibm.className}`}
+                    onClick={() => router.push('/services')} // Add onClick handler
+                >
+                    Explore
+                </button>
             </div>
 
             {/* A simple container for our static cards */}
             <div className="px-6 w-full flex flex-col items-center space-y-4">
               {services.map((service, index) => (
-                <ServiceCard 
+                <ServicesCard 
                   key={index} 
                   service={service} 
                 />

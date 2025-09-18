@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { ibm , karla} from "../lib/fonts";
+import { ibm , karla } from "../lib/fonts";
 import TypewriterEffect from "@/components/TypewriterEffect";
 
 export default function AboutSection() {
@@ -16,7 +16,7 @@ export default function AboutSection() {
                 >
                     {/* Placeholder image */}
                     <img
-                        src="/michael.png"
+                        src="/shubh.jpg"
                         alt="Profile Placeholder"
                         className="w-full h-full object-cover"
                     />
@@ -61,7 +61,7 @@ export default function AboutSection() {
                     </div>
                 </div>
             </div>
-            <div  className={`mt-6 p-2 font-regular body-text w-50 h-12 flex items-center justify-center bg-[#171717] text-white ${karla.className}`}>
+            <div  className={`mt-8 p-2 font-regular body-text w-50 h-12 flex items-center justify-center bg-[#171717] text-white ${karla.className}`}>
             <a
                 href="/resume.pdf" // The path to your resume in the public folder
                 target="_blank" // This opens the link in a new tab

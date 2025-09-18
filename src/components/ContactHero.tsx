@@ -33,7 +33,7 @@ export default function ContactHero() {
                         id="name"
                         name="name"
                         placeholder="Your Name"
-                        className={` w-full px-4 py-5 focus:outline-none focus:ring-1 focus:ring-black placeholder:text-gray-400 sub-heading font-light text-black bg-gray-100`}
+                        className={` w-full px-4 py-5 focus:outline-none focus:ring-1 focus:ring-black placeholder:text-gray-500 sub-heading font-light text-black bg-gray-200`}
                     />
 
                     <input
@@ -41,13 +41,13 @@ export default function ContactHero() {
                         id="name"
                         name="name"
                         placeholder="Your Email"
-                        className={` w-full px-4 py-5 focus:outline-none focus:ring-1 focus:ring-black placeholder:text-gray-400 sub-heading font-light text-black bg-gray-100`}
+                        className={` w-full px-4 py-5 focus:outline-none focus:ring-1 focus:ring-black placeholder:text-gray-500 sub-heading font-light text-black bg-gray-200`}
                     />
                     <textarea
                         id="message"
                         name="message"
                         placeholder="Describe your needs"
-                        className={`w-full px-4 py-5 focus:outline-none focus:ring-1 focus:ring-black placeholder:text-gray-400 sub-heading font-light text-black bg-gray-100 resize-y min-h-[120px]`}
+                        className={`w-full px-4 py-5 focus:outline-none focus:ring-1 focus:ring-black placeholder:text-gray-500 sub-heading font-light text-black bg-gray-200 resize-y min-h-[120px]`}
                         rows={5}
                     />
                     
