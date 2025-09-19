@@ -32,7 +32,7 @@ export default function ProjectCarousel({ emblaRef, projects, selectedIndex }: P
                 <div className="overflow-hidden" ref={emblaRef}>
                     <div className="flex">
                         {projects.map((project, index) => (
-                                <div key={index} className={`flex-[0_0_95%] md:flex-[0_0_50%] min-w-0 transition-all duration-300 ease-in-out ${index === selectedIndex ? 'opacity-100 scale-100' : 'opacity-50 scale-90'}`}>
+                                <div key={index} className={`flex-[0_0_100%] md:flex-[0_0_50%] min-w-0 transition-all duration-300 ease-in-out ${index === selectedIndex ? 'opacity-100 scale-100' : 'opacity-100 scale-100'}`}>
                                     <ProjectCard project={project} />
                                 </div>
                         ))}

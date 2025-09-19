@@ -144,11 +144,11 @@ export default function WorkSection() {
                     <div>
                         <h1 className={`font-medium sub-heading ${karla.className}`}>work.</h1>
                     </div>
-                    <div className="border-2 border-gray-400/20 bg-white p-1.5">
+                    <div className="border-2 rounded-full border-gray-400/20 bg-white p-2">
                         <div className={`relative flex items-start gap-x-2`}>
                             {/* Moving white background */}
                             <div 
-                                className={`absolute top-0 h-full bg-black transition-all duration-300 ease-in-out`}
+                                className={`absolute rounded-full top-0 h-full bg-black transition-all duration-600 ease-in-out`}
                                 style={bgStyle}
                             ></div>
                             <h2 
@@ -170,10 +170,10 @@ export default function WorkSection() {
                 </div>
             </div>
             {/* Project Carousel */}
-            <div className="w-full py-8">
+            <div className="w-full pt-4">
                 <ProjectCarousel emblaRef={emblaRef} projects={projects} selectedIndex={selectedIndex} />
             </div>
-            <div className="w-full flex justify-center items-center gap-x-4">
+            <div className="w-full flex justify-center items-center gap-x-4 mt-8.5">
                 <button 
                     onClick={scrollPrev} 
                     className="w-10 h-10 flex items-center justify-center bg-black rounded-full text-white"
@@ -191,5 +191,6 @@ export default function WorkSection() {
                 </button>
             </div>     
         </div>
+        
     );
 }

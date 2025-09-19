@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import { ibm, karla } from "../lib/fonts";
-import ServicesCard from "./ServicesCard"; // The filename is ServicesCard.tsx
+import ServicesCard from "./ServicesCard-hero"; // The filename is ServicesCard.tsx
 import { useRouter } from "next/navigation"; // Import useRouter
 
 

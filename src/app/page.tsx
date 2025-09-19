@@ -1,7 +1,7 @@
 import React from "react";
 import { ibm } from "@/lib/fonts";
 import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
+import ServicesSection from "@/components/ServicesSection-hero";
 import Footer from "@/components/Footer";
 import AboutSection from "@/components/AboutSection";
 

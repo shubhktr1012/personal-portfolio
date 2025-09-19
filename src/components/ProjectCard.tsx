@@ -39,7 +39,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div
             className="w-full min-h-110 h-content bg-black text-white flex flex-col justify-between overflow-hidden"
         >
-            <div className="relative w-full h-full flex flex-col p-3.5 items-start gap-y-5">
+            <div className="relative w-full h-full flex flex-col items-start gap-y-5">
                 <div className="w-full h-[60%] bg-gray-300 ">
                 <Image
                     src={project.image}
@@ -50,10 +50,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 />
                 </div>
                 
-                <div className="w-full border-t border-white/50">
-                </div>
+                {/* <div className="w-full border-t border-white/50">
+                </div> */}
 
-                <div className="w-full h-full flex flex-col items-start gap-y-3">
+                <div className="w-full py-2 px-3.5 h-full flex flex-col items-start gap-y-3">
                     <div className="w-full flex items-start justify-between">
                         <div className={`font-medium heading ${karla.className}`}>
                         {project.title}
@@ -68,9 +68,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                         {project.description}
                     </div>
                 </div>
-                <div className="w-full">
+                <div className="py-2 px-3.5 w-full">
                     {caseStudySections.map((section, index) => (
-                        <div key={index} className="border-b border-white/20">
+                        <div
+                            key={index}
+                            className={index !== caseStudySections.length - 1 ? "border-b border-white/20" : ""}
+                        >
                             <button
                                 onClick={() => toggleSection(section.key)}
                                 className="w-full flex justify-between items-center py-3 text-left"
