@@ -4,6 +4,7 @@ import { karla } from '../lib/fonts';
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from 'motion/react';
+import Image from 'next/image'; // Import Image
 
 export default function Navbar() {
 
@@ -110,6 +111,20 @@ export default function Navbar() {
             <motion.a href="/" variants={linkVariants}>Home</motion.a>
             <motion.a href="/services" variants={linkVariants}>Work & Services</motion.a>
             <motion.a href="/contact" variants={linkVariants}>Contact Me</motion.a>
+            <motion.div 
+              variants={linkVariants} 
+              className="absolute bottom-10 left-0 right-0 flex items-center justify-center gap-x-6"
+            >
+              <a href="https://www.linkedin.com/in/shubhkhatri1209/" target="_blank" rel="noopener noreferrer">
+                <Image src="/linkedin.svg" alt="LinkedIn" width={46} height={46} className="filter brightness-0" />
+              </a>
+              <a href="https://github.com/shubhktr1012" target="_blank" rel="noopener noreferrer">
+                <Image src="/github.svg" alt="GitHub" width={46} height={46} className="filter brightness-0" />
+              </a>
+              <a href="https://www.instagram.com/shubh_khatri12" target="_blank" rel="noopener noreferrer">
+                <Image src="/instagram.svg" alt="Instagram" width={46} height={46} className="filter brightness-0" />
+              </a>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

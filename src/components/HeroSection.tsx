@@ -39,7 +39,7 @@ export default function HeroSection() {
                     setCopied(true);
                     setTimeout(() => setCopied(false), 1500);
                 }}
-                >n
+                >
                     {email} <RiFileCopyLine size={28} />
                 </button>
                 {/* Short bio/description */}

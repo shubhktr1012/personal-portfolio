@@ -40,7 +40,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="w-full min-h-110 h-content bg-black text-white flex flex-col justify-between overflow-hidden"
         >
             <div className="relative w-full h-full flex flex-col items-start gap-y-5">
-                <div className="w-full h-[60%] bg-gray-300 ">
+                <div className="w-full h-80 bg-gray-300 md:h-80">
                 <Image
                     src={project.image}
                     alt={project.title}
