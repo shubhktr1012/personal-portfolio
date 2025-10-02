@@ -38,15 +38,15 @@ a, button, input, textarea {
 /* Custom Typography Classes */
 @layer utilities {
   .heading {
-    @apply text-2xl lg:text-3xl;
+    @apply text-2xl xl:text-3xl;
   }
   
   .sub-heading {
-    @apply text-xl lg:text-2xl;
+    @apply text-xl xl:text-2xl;
   }
   
   .body-text {
-    @apply text-base lg:text-lg;
+    @apply text-base xl:text-lg;
   }
 }
 
@@ -76,11 +76,42 @@ a, button, input, textarea {
 }
 
 .profile-picture {
-  width: 100px;       /* Set a fixed width */
-  height: 100px;      /* Set an equal height to make it a square */
+  width: 120px;       /* Set a fixed width */
+  height: 120px;      /* Set an equal height to make it a square */
   border-radius: 50%; /* This is the magic line that makes it a circle */
   object-fit: cover;  /* Prevents the image from being stretched or squished */
   background-color: lightgrey; /* Light gray fill */
+}
+.profile-picture-xs {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: lightgrey;
+}
+
+.profile-picture-sm {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: lightgrey;
+}
+
+.profile-picture-md {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: lightgrey;
+}
+
+.profile-picture-lg {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: lightgrey;
 }
 
 .lenis.lenis-smooth { scroll-behavior: auto !important; }

@@ -123,7 +123,7 @@ export default function WorkSection() {
     }, [activeTab]);
 
     return (
-        <div className="py-10 max-w-full md:hidden flex flex-col justify-center border-b border-t border-gray-400/20">
+        <div className="py-10 max-w-full lg:hidden flex flex-col justify-center border-b border-t border-gray-400/20">
             {/* <div className="px-4">
                 <h1 className={`font-bold text-7xl text-black tracking-tighter ${karla.className}`}>WORK & <br /> SERVICES</h1>
             </div> */}

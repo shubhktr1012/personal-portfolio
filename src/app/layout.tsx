@@ -22,7 +22,7 @@ export default function RootLayout({
         <SmoothScroll />
         <div className="min-h-screen">
           <Navbar />
-          <main className="w-full md:container md:mx-auto">
+          <main className="w-full 2xl:container 2xl:mx-auto">
             <div className="flex items-start w-full">
               {children}
             </div>

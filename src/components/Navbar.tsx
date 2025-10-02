@@ -1,10 +1,17 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import { karla } from '../lib/fonts';
 import { HiBars3BottomLeft } from "react-icons/hi2";
-import { HiX } from "react-icons/hi";
+import { HiX, HiChevronDown } from "react-icons/hi";
 import { motion, AnimatePresence } from 'motion/react';
-import Image from 'next/image'; // Import Image
+import Image from 'next/image';
+import { Menu, Transition, MenuButton, MenuItems, MenuItem } from '@headlessui/react';
+
+const socialLinks = [
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/shubhkhatri1209/', icon: '/linkedin.svg' },
+  { name: 'GitHub', href: 'https://github.com/shubhktr1012', icon: '/github.svg' },
+  { name: 'Instagram', href: 'https://www.instagram.com/shubh_khatri12', icon: '/instagram.svg' },
+];
 
 export default function Navbar() {
 
@@ -39,7 +46,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={`w-full px-6 ${karla.className} relative`}>
+    <nav className={`w-full px-6 ${karla.className} relative border-b border-gray-400/20`}>
       <div className="flex items-center justify-between min-w-full py-6 relative z-30">
         {/* Logo/Brand */}
         <div>
@@ -64,7 +71,52 @@ export default function Navbar() {
           <a href="/contact" className="body-text hover:text-primary transition-colors">
             Contact Me
           </a>
-          {/* Minimal custom button will be added here later */}
+          
+          <Menu as="div" className="relative inline-block text-left">
+            <div>
+              <MenuButton className="inline-flex w-full justify-center items-center body-text hover:text-primary transition-colors">
+                Socials
+                <HiChevronDown className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+              </MenuButton>
+            </div>
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-100"
+              enterFrom="transform opacity-0 scale-95"
+              enterTo="transform opacity-100 scale-100"
+              leave="transition ease-in duration-75"
+              leaveFrom="transform opacity-100 scale-100"
+              leaveTo="transform opacity-0 scale-95"
+            >
+              <MenuItems className="absolute right-0 mt-2 w-56 origin-top-right bg-white border-2 border-black focus:outline-none z-10">
+                <div className="py-1">
+                  {socialLinks.map((item) => (
+                    <MenuItem key={item.name}>
+                      {({ active: itemActive }) => (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`${
+                            itemActive ? 'bg-black text-white' : 'text-black'
+                          } group flex items-center w-full px-4 py-3 text-sm`}
+                        >
+                          <Image 
+                            src={item.icon} 
+                            alt={item.name} 
+                            width={20} 
+                            height={20} 
+                            className={`mr-3 filter ${itemActive ? 'brightness-0 invert' : 'brightness-0'}`}
+                          />
+                          {item.name}
+                        </a>
+                      )}
+                    </MenuItem>
+                  ))}
+                </div>
+              </MenuItems>
+            </Transition>
+          </Menu>
         </div>
 
         {/* Mobile Menu Button */}
